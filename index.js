@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".top-btn").click(function (e) {
+  $(".top").click(function (e) {
     e.preventDefault();
     $("html,body").animate(
       {

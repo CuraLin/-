@@ -1,7 +1,7 @@
 /* base*/
 *,
-*::before,
-*::after {
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -13,21 +13,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
 }
-/* 字體 */
-.menu a,
-.banner h2,
-.service,
-.partner h2,
-.recommed-postcard span,
-.recommed li p,
-.calltoaction h2,
-.calltoaction a,
-.sitemap-list a,
-footer,
-footer a,
-.top-btn {
-    color: #fff;
-}
+
 img {
     max-width: 100%;
     height: auto;
@@ -39,23 +25,26 @@ a {
 
 
 /* system */
-header h1 a {
+.header h1 a {
     display: block;
     background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png);
-    width: 490px;
-    height: 80px;
+    height: 100%;
+    width: 150px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     text-indent: 101%;
     overflow: hidden;
     white-space: nowrap;
 }
 
 .container {
-   
+    background: #000;
     max-width: 1296px;
     margin: 0 auto;
 }
 
-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +52,7 @@ header {
     padding: 20px 0px;
 }
 
-header img {
+.header img {
     width: 240px;
 }
 
@@ -98,19 +87,14 @@ header img {
     font-weight: 900;
     line-height: 144px;
     letter-spacing: 0em;
-   
+    text-align: left;
     margin-bottom: 60px;
 }
 
 .banner a {
-   
-        font-weight: 900;
-        font-size: 19px;
-        line-height: 120%;
     display: block;
     text-align: center;
     width: 160px;
-    
     color: #fff;
     text-decoration: none;
     border: 1px solid #ffffff;
@@ -125,11 +109,6 @@ header img {
 
 .animation {
     text-align: right;
-}
-
-.animation img {
-    width: 540px;
-    height: 180px;
 }
 
 .service {
@@ -153,6 +132,7 @@ header img {
 .service-ai h3 {
     text-align: left;
    
+        font-style: normal;
         font-weight: 900;
         font-size: 32px;
         line-height: 120%;
@@ -170,29 +150,20 @@ header img {
     padding: 80px 40px;
 }
 
-.sevice-list .mb-26 {
+.sevice-list img {
     margin-bottom: 26px;
 }
-.sevice-list .material-icons{
-   font-size: 60px;
-        display: block;
-            width: 33px;
-            height: 67px;
-}
+
 .sevice-list h2 {
     margin-bottom: 20px;
-    font-style: normal;
-        font-weight: 900;
-        font-size: 32px;
-        line-height: 120%;
 }
 
-/* partner */
-.partner {
+/* partnet */
+.partnet {
     margin-bottom: 160px;
 }
 
-.partner-flex {
+.partnet-flex {
     display: flex;
     flex-direction: column;
 }
@@ -222,14 +193,14 @@ header img {
 
 
 
-.partner h2 {
+.partnet h2 {
     font-size: 32px;
     line-height: 1.2;
     font-weight: 900;
     margin-bottom: 80px;
 }
 
-.partner-list {
+.partnet-list {
     display: flex;
     /* flex-wrap: wrap;
     margin-bottom: 100px;
@@ -253,7 +224,7 @@ header img {
     margin-right: 10px;
 }
 
-.partner-list li {
+.partnet-list li {
     max-width: 160px;
     margin-right: 50px;
 }
@@ -261,14 +232,14 @@ header img {
 .recommed {
     display: flex;
     margin-bottom: 160px;
-    justify-content: space-between;    
+    /* justify-content: space-between;     */
 }
 
 .recommed li {
     background: rgba(255, 255, 255, 0.08);
-    
+    margin: 20px;
     border-radius: 16px;
-    width: 32%;
+    width: 33%;
     padding: 35px;
 }
 
@@ -290,8 +261,7 @@ header img {
     margin-right: 16px;
 }
 
-.recommed-postcard span {
-    display: block;
+.recommed-postcard h3 {
     margin-bottom: 4px;
 }
 
@@ -302,8 +272,7 @@ header img {
 /* bg-white */
 .bg-wrap {
     background: #fff;
-    padding: 160px 312px;
-    border-radius: 160px;
+    padding: 160px 0px;
     /* border-radius: 60px; */
 }
 
@@ -413,13 +382,14 @@ header img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    white-space: nowrap;
 
 }
 
-.tools-menu button {
+.tools-menu a {
     color: #919191;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .tools-menu .bg {
@@ -435,17 +405,12 @@ header img {
     padding: 20px 32px 20px 40px;
     border: 1px solid #F2F2F2;
     border-radius: 16px;
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    text-align: center;
-        
 }
 
 .tools-menu ul {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .tools-menu ul li {
@@ -485,28 +450,14 @@ header img {
 }
 
 .pagination ul li {
-   
     padding: 8px 16px;
     text-align: center;
     display: flex;
     align-items: center;
-    
 }
-.pagination button{
-border: none;
-background: #FFF;
-font-weight: 700;
-    font-size: 14px;
-    line-height: 150%;
-}
-.pagination span{
-    font-size: 16px;
-}
-.btn-big{
-   width: 48px;
-    height: 48px;
-}
-.pagination .bb {
+
+
+.bb {
     background: #020202;
     border-radius: 16px;
     color: #fff;
@@ -561,17 +512,8 @@ font-weight: 700;
     font-size: 80px;
     line-height: 120%;
 }
-.sitemap-list a{
-    text-decoration: none;
-}
 
-.sitemap-logo img {
-    width: 164px;
-    height: 40px;
-}
-
-
-footer {
+.footer {
     display: flex;
     padding: 30px 0px;
 
@@ -590,22 +532,36 @@ footer {
     margin-right: 100px;
 }
 
-.top-btn {
+.top {
     position: absolute;
-    right: 25px;
-    bottom: 25px;
+    right: 30px;
+    bottom: 30px;
     text-align: center;
 
 }
 
-.top-btn .material-icons {
+.top .material-icons {
     position: absolute;
     margin-left: 5px;
 }
 
 
 
-
+/* 字體 */
+.menu a,
+.banner h2,
+.service,
+.partnet h2,
+.recommed-postcard h3,
+.recommed li p,
+.calltoaction h2,
+.calltoaction a,
+.sitemap-list ul,
+.footer,
+.footer a,
+.top {
+    color: #fff;
+}
 
 
 
@@ -617,18 +573,13 @@ e-list h2 {
 }
 
 .sevice-list p {
-color: #F2F2F2;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .tools-menu .cb {
     color: #020202;
-}
-
-.tools-menu .bgWhite {
-    background: #fff;
 }
 
 .pos-r {
@@ -664,7 +615,27 @@ color: #F2F2F2;
         width: 100%;
 
     }
+
+
+
+
 }
 
 /*RWD 767 */
-@media(max-width:767px) {}
+@media(max-width:767px) {
+
+    .tools-btn {
+        padding: 10px 0px;
+
+    }
+
+    .footer {
+        display: initial;
+
+
+    }
+
+    .recommed-p {
+        height: auto ;
+    }
+}
