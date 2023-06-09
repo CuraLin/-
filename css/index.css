@@ -1,7 +1,5 @@
 /* base*/
-*,
-*:before,
-*:after {
+*,*::before,*::after {
     box-sizing: border-box;
 }
 
@@ -24,8 +22,27 @@ a {
 }
 
 
+
+
+
+/* 字體 */
+.menu a,
+.banner h2,
+.service,
+.partner h2,
+.recommed-postcard h3,
+.recommed li p,
+.calltoaction h2,
+.calltoaction a,
+.sitemap-list a,
+footer,
+footer a,
+.topBtn {
+    color: #fff;
+}
+
 /* system */
-.header h1 a {
+header h1 a {
     display: block;
     background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png);
     height: 100%;
@@ -39,12 +56,12 @@ a {
 }
 
 .container {
-    background: #000;
+   
     max-width: 1296px;
     margin: 0 auto;
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +69,7 @@ a {
     padding: 20px 0px;
 }
 
-.header img {
+header img {
     width: 240px;
 }
 
@@ -87,7 +104,7 @@ a {
     font-weight: 900;
     line-height: 144px;
     letter-spacing: 0em;
-    text-align: left;
+   
     margin-bottom: 60px;
 }
 
@@ -109,8 +126,12 @@ a {
 
 .animation {
     text-align: right;
-}
 
+    height: 180px;
+}
+.animation img{
+    width: 540px;
+}
 .service {
     padding: 40px 4px;
 }
@@ -131,39 +152,42 @@ a {
 
 .service-ai h3 {
     text-align: left;
-   
-        font-style: normal;
-        font-weight: 900;
-        font-size: 32px;
-        line-height: 120%;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 120%;
 }
 
-.sevice-list {
+.service-list {
     display: flex;
     justify-content: space-between;
 }
 
-.sevice-list li {
+.service-list li {
     width: 32%;
     border: 1px solid #525252;
     border-radius: 16px;
     padding: 80px 40px;
 }
 
-.sevice-list img {
+.service-list span {
     margin-bottom: 26px;
 }
-
-.sevice-list h2 {
+.service-list .material-icons{
+    display: block;
+   font-size: 50px;
+}
+.service-list h2 {
     margin-bottom: 20px;
 }
 
-/* partnet */
-.partnet {
+/* partner */
+.partner {
     margin-bottom: 160px;
 }
 
-.partnet-flex {
+.partner-flex {
     display: flex;
     flex-direction: column;
 }
@@ -193,14 +217,14 @@ a {
 
 
 
-.partnet h2 {
+.partner h2 {
     font-size: 32px;
     line-height: 1.2;
     font-weight: 900;
     margin-bottom: 80px;
 }
 
-.partnet-list {
+.partner-list {
     display: flex;
     /* flex-wrap: wrap;
     margin-bottom: 100px;
@@ -224,7 +248,7 @@ a {
     margin-right: 10px;
 }
 
-.partnet-list li {
+.partner-list li {
     max-width: 160px;
     margin-right: 50px;
 }
@@ -272,8 +296,8 @@ a {
 /* bg-white */
 .bg-wrap {
     background: #fff;
-    padding: 160px 0px;
-    /* border-radius: 60px; */
+    padding: 160px 312px;
+    border-radius: 160px;
 }
 
 .bg-container {
@@ -284,7 +308,7 @@ a {
 }
 
 .card {
-    width: 416px;
+    width: 33%;
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;
@@ -292,8 +316,20 @@ a {
     border-radius: 16px;
     box-sizing: border-box;
     font-family: "Noto Sans TC", sans-serif;
+    
 }
-
+.card .cardHidden{
+    overflow: hidden;
+}
+.card img{
+    width: 100%;
+        display: block;
+}
+.card img:hover{
+    transform: scale(1.1);
+        transition: all 0.5s;
+        
+}
 .card-header,
 .app-card,
 .link-card {
@@ -405,6 +441,19 @@ a {
     padding: 20px 32px 20px 40px;
     border: 1px solid #F2F2F2;
     border-radius: 16px;
+    background: #FFFFFF;
+    display: flex;
+}
+
+.tools-btn p {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+
+    text-align: center;
 }
 
 .tools-menu ul {
@@ -443,24 +492,42 @@ a {
     position: relative;
 }
 
-.pagination ul {
+.pagination {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.pagination ul li {
-    padding: 8px 16px;
+.pagination button {
+    padding: 10px 16px;
     text-align: center;
     display: flex;
     align-items: center;
+    border: none;
 }
 
+.pageBtn {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    background: #FFFFFF;
+    /*     
+        display: flex;
+        align-items: center;
+        text-align: center; */
+
+
+
+    color: #020202;
+}
 
 .bb {
     background: #020202;
     border-radius: 16px;
     color: #fff;
+
 }
 
 
@@ -497,7 +564,9 @@ a {
 }
 
 
-
+.sitemap {
+    position: relative;
+}
 
 .sitemap-list {
     display: flex;
@@ -513,7 +582,12 @@ a {
     line-height: 120%;
 }
 
-.footer {
+.sitemap-logo {
+    width: 223px;
+    height: 40px;
+}
+
+footer {
     display: flex;
     padding: 30px 0px;
 
@@ -532,7 +606,7 @@ a {
     margin-right: 100px;
 }
 
-.top {
+.topBtn {
     position: absolute;
     right: 30px;
     bottom: 30px;
@@ -540,28 +614,14 @@ a {
 
 }
 
-.top .material-icons {
+.topBtn .material-icons {
     position: absolute;
     margin-left: 5px;
 }
 
 
 
-/* 字體 */
-.menu a,
-.banner h2,
-.service,
-.partnet h2,
-.recommed-postcard h3,
-.recommed li p,
-.calltoaction h2,
-.calltoaction a,
-.sitemap-list ul,
-.footer,
-.footer a,
-.top {
-    color: #fff;
-}
+
 
 
 
@@ -572,7 +632,7 @@ e-list h2 {
     line-height: 38px;
 }
 
-.sevice-list p {
+.service-list p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -606,18 +666,24 @@ e-list h2 {
 
     }
 
-    .sevice-list {
+    .service-list {
         display: flex;
         flex-direction: column;
     }
 
-    .sevice-list li {
+    .service-list li {
         width: 100%;
 
     }
 
+    .card {
+        width: 50%;
 
+    }
 
+    .bg-wrap {
+        padding: 15% 15%;
+    }
 
 }
 
@@ -629,13 +695,13 @@ e-list h2 {
 
     }
 
-    .footer {
+    footer {
         display: initial;
 
 
     }
 
     .recommed-p {
-        height: auto ;
+        height: auto;
     }
 }
